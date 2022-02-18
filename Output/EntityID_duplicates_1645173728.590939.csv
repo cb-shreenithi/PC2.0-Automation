@@ -1,0 +1,73 @@
+#,Currency_frequency,Duplicate_Values,item_type
+2.0,"
+Item price points ('Plan id's in catalog 1.0) | USD - Monthly",entity-2,plan
+2.0,USD - Monthly | entity-1,entity-2,addon
+2.0,"
+Item price points ('Plan id's in catalog 1.0) | USD - Annual",entity-22,plan
+2.0,USD - Annual | entity-11,entity-22,addon
+2.0,"
+Item price points ('Plan id's in catalog 1.0) | USD-Weekly",entity-222,plan
+2.0,INR- Monthly | entity-111,entity-222,addon
+3.0,"
+Item price points ('Plan id's in catalog 1.0) | USD - Annual",entity-33,plan
+3.0,USD - Annual | entity-11,entity-33,addon
+3.0,"
+Item price points ('Plan id's in catalog 1.0) | USD-Weekly",entity-333,plan
+3.0,INR- Monthly | entity-111,entity-333,addon
+4.0,"
+Item price points ('Plan id's in catalog 1.0) | USD - Monthly",entity-4,plan
+5.0,USD - Monthly | entity-1,entity-4,addon
+4.0,"
+Item price points ('Plan id's in catalog 1.0) | USD - Annual",entity-44,plan
+5.0,USD - Annual | entity-11,entity-44,addon
+4.0,"
+Item price points ('Plan id's in catalog 1.0) | USD-Weekly",entity-444,plan
+5.0,INR- Monthly | entity-111,entity-444,addon
+6.0,USD - Monthly | entity-1,entity-5,addon
+5.0,"
+Item price points ('Plan id's in catalog 1.0) | USD - Monthly",entity-5,plan
+6.0,USD - Annual | entity-11,entity-55,addon
+5.0,"
+Item price points ('Plan id's in catalog 1.0) | USD - Annual",entity-55,plan
+6.0,INR- Monthly | entity-111,entity-555,addon
+5.0,"
+Item price points ('Plan id's in catalog 1.0) | USD-Weekly",entity-555,plan
+7.0,USD - Monthly | entity-1,entity-6,addon
+6.0,"
+Item price points ('Plan id's in catalog 1.0) | USD - Monthly",entity-6,plan
+7.0,USD - Annual | entity-11,entity-66,addon
+6.0,"
+Item price points ('Plan id's in catalog 1.0) | USD - Annual",entity-66,plan
+7.0,INR- Monthly | entity-111,entity-666,addon
+6.0,"
+Item price points ('Plan id's in catalog 1.0) | USD-Weekly",entity-666,plan
+7.0,"
+Item price points ('Plan id's in catalog 1.0) | USD - Monthly",entity-7,plan
+8.0,USD - Monthly | entity-1,entity-7,addon
+8.0,USD - Annual | entity-11,entity-77,addon
+7.0,"
+Item price points ('Plan id's in catalog 1.0) | USD - Annual",entity-77,plan
+8.0,INR- Monthly | entity-111,entity-777,addon
+7.0,"
+Item price points ('Plan id's in catalog 1.0) | USD-Weekly",entity-777,plan
+8.0,"
+Item price points ('Plan id's in catalog 1.0) | USD - Monthly",entity-8,plan
+9.0,USD - Monthly | entity-1,entity-8,addon
+9.0,USD - Annual | entity-11,entity-88,addon
+8.0,"
+Item price points ('Plan id's in catalog 1.0) | USD - Annual",entity-88,plan
+9.0,INR- Monthly | entity-111,entity-888,addon
+8.0,"
+Item price points ('Plan id's in catalog 1.0) | USD-Weekly",entity-888,plan
+10.0,USD - Monthly | entity-1,entity-9,addon
+9.0,"
+Item price points ('Plan id's in catalog 1.0) | USD - Monthly",entity-9,plan
+10.0,USD - Annual | entity-11,entity-99,addon
+9.0,"
+Item price points ('Plan id's in catalog 1.0) | USD - Annual",entity-99,plan
+9.0,"
+Item price points ('Plan id's in catalog 1.0) | USD-Weekly",entity-999,plan
+10.0,INR- Monthly | entity-111,entity-999,addon
+#,Count of entity ids,Total number of entities for Plan Consolidation,29
+#,Count of entity ids,Total number of entities for Addon Consolidation,24
+#,Count of entity ids,Total number of entities for Charge Consolidation,2
