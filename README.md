@@ -1,6 +1,6 @@
 # PC2.0-Automation
 
-### Find_duplicates.py
+## <ins>Find_duplicates.py</ins>
   
 Find the duplicates of the Item-IDs, Item-Names
   and price-entity-ids in the Negative-Flow-sheet.xlsx. 
@@ -21,7 +21,12 @@ PC2.0-Automation
 
 **NOTE**: You need an Excel workbook (mentioned above as `<Negative-flow-sheet>.xlsx`) as the input and the desired outputs will be available in the folder `Output`. 
 The filename `<Negative-flow-sheet>.xlsx` means you need to put your Excel workbook here. 
- 
+Please delete the folder `Output` after cloning as it only contains sample output files.
+
+
+### <ins>Install dependencies and run script</ins> :
+
+
 To parse the Excel file you need to follow the below steps exactly :
 
 **Step-1** : Run the shell script, from the terminal, to install dependencies.
