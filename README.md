@@ -61,13 +61,15 @@ command from your current directory
 ```
 You should now see the following in your terminal :
 ```commandline
-(pc2Automation) cb-it-00-0000@CB-IT-00-0000s-MacBook-Pro PC2.0-Automation %
+(pc2Automation) ***** PC2.0-Automation %
 ```
 
 **Step-3** : If your Step-2 is complete then all you have to do is run the following :
 ```commandline
-(pc2Automation) cb-it-00-0000@CB-IT-00-0000s-MacBook-Pro PC2.0-Automation % python3 Find_duplicates.py --filename <Negative-flow-sheet>.xlsx 
+(pc2Automation) ***** PC2.0-Automation % python3 Find_duplicates.py --filename "<Negative-flow-sheet>.xlsx" 
 ```
+**NOTE :** Please include your filename within double quotes.
+
 If this executes then you will see the following lines:
 ```commandline
 (pc2Automation) cb-it-01-1487@CB-IT-01-1487s-MacBook-Pro PC2.0-Automation % python3 Find_duplicates.py --filename <Negative-flow-sheet>.xlsx 
