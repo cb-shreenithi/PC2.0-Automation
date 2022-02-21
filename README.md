@@ -75,3 +75,5 @@ PC2.0-Automation
 └── pc2Automation
 ```
 
+#### NOTE : `New PC2.0 - Negative flow sheet.xlsx` is an example input xlsx file. You can follow the format for the file headers. The `Output` folder contains sample outputs from that input file.
+
