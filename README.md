@@ -36,7 +36,9 @@ To parse the Excel file you need to follow the below steps exactly :
  
  ./setup_env.sh
 ```
-**NOTE :** After this step please verify if a folder has been created in your current 
+`chmod +x` is necessary to change permissions.
+
+**NOTE :** After this step please verify if a folder has been created in your current
 directory with the name `pc2Automation`. This is the virtual environment where all dependencies are 
 installed.
 
