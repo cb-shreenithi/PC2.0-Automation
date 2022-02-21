@@ -32,11 +32,12 @@ To parse the Excel file you need to follow the below steps exactly :
 **Step-1** : Run the shell script, from the terminal, to install dependencies.
 ```setup-environment 
  chmod +x setup_env.sh
- 
- 
- ./setup_env.sh
 ```
 `chmod +x` is necessary to change permissions.
+
+```commandline
+ ./setup_env.sh
+```
 
 **NOTE :** After this step please verify if a folder has been created in your current
 directory with the name `pc2Automation`. This is the virtual environment where all dependencies are 
@@ -60,22 +61,24 @@ command from your current directory
  source ./pc2Automation/bin/activate
 ```
 You should now see the following in your terminal :
-```commandline
-(pc2Automation) ***** PC2.0-Automation %
-```
+
+> (pc2Automation) ***** PC2.0-Automation %
+
 
 **Step-3** : If your Step-2 is complete then all you have to do is run the following :
 ```commandline
-(pc2Automation) ***** PC2.0-Automation % python3 Find_duplicates.py --filename "<Negative-flow-sheet>.xlsx" 
+python3 Find_duplicates.py --filename "<Negative-flow-sheet>.xlsx" 
 ```
 **NOTE :** Please include your filename within double quotes.
 
 If this executes then you will see the following lines:
-```commandline
-(pc2Automation) cb-it-01-1487@CB-IT-01-1487s-MacBook-Pro PC2.0-Automation % python3 Find_duplicates.py --filename <Negative-flow-sheet>.xlsx 
-Processing file : <Negative-flow-sheet>.xlsx
-File has been processed. :)
-```
+
+> (pc2Automation) **** PC2.0-Automation % python3 Find_duplicates.py --filename <Negative-flow-sheet>.xlsx 
+> 
+> Processing file : <Negative-flow-sheet>.xlsx
+> 
+> File has been processed. :)
+
 also, you will have a new folder in your current directory.
 ```commandline
 PC2.0-Automation

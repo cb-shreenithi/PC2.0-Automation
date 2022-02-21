@@ -22,8 +22,9 @@ Assumptions so far:
 # READ DATA FROM EXCEL SHEET
 parser.add_argument('--filename', type=str, required=True)
 args = parser.parse_args()
-print("Processing file :", args.filename)
-excel_workbook_name = os.getcwd() + '/' + args.filename
+file_name_cleaned = args.filename.replace(" ", "_")
+print("Processing file :", file_name_cleaned)
+excel_workbook_name = os.getcwd() + '/' + file_name_cleaned
 excel_workbook = excel_workbook_name
 pd_excel_file = pd.ExcelFile(excel_workbook)
 excel_sheet_names = pd_excel_file.sheet_names
@@ -92,7 +93,8 @@ df_by_itemid = pd.concat([
 ])
 duplicate_byid_df = df_by_itemid[df_by_itemid.duplicated(subset=["Item_ID"], keep=False)]
 duplicate_byid_df = duplicate_byid_df[~duplicate_byid_df['Item_ID'].isna()].sort_values("Item_ID")
-duplicate_byid_df.to_csv(OUTPUT_PATH + f"/Item_ID_duplicates_{CURRENT_TIMESTAMP}.csv", index=False)
+duplicate_byid_df.to_csv(OUTPUT_PATH + f"/Item_ID_duplicates_{file_name_cleaned}_{CURRENT_TIMESTAMP}.csv",
+                         index=False)
 
 # Get only the duplicates by Item Name
 df_by_itemname = pd.concat([
@@ -102,7 +104,8 @@ df_by_itemname = pd.concat([
 ])
 duplicate_byname_df = df_by_itemname[df_by_itemname.duplicated(subset=["Item_Name"], keep=False)]
 duplicate_byname_df = duplicate_byname_df[~duplicate_byname_df['Item_Name'].isna()].sort_values("Item_Name")
-duplicate_byname_df.to_csv(OUTPUT_PATH + f"/Item_Name_duplicates_{CURRENT_TIMESTAMP}.csv", index=False)
+duplicate_byname_df.to_csv(OUTPUT_PATH + f"/Item_Name_duplicates_{file_name_cleaned}_{CURRENT_TIMESTAMP}.csv",
+                           index=False)
 
 #########################################################################################
 #########################################################################################
@@ -156,7 +159,7 @@ calDF = pd.DataFrame([
     ['Addon Consolidation', df_addon_pc1.shape[0]],
     ['Charge Consolidation', df_charge_pc1.shape[0]]])
 calDF.columns = ['Sheet Name', 'Count of entity IDs in sheet']
-calDF.to_csv(OUTPUT_PATH + f"/Count_of_items_{CURRENT_TIMESTAMP}.csv", index=False)
+calDF.to_csv(OUTPUT_PATH + f"/Count_of_items_{file_name_cleaned}_{CURRENT_TIMESTAMP}.csv", index=False)
 
 # Get duplicates of the entities
 mergePC1DF = pd.concat([df_plan_pc1, df_addon_pc1, df_charge_pc1])
@@ -171,5 +174,6 @@ entityDuplicatesDF.loc[len(entityDuplicatesDF.index)] = ['#', 'Count of entity i
 entityDuplicatesDF.loc[len(entityDuplicatesDF.index)] = ['#', 'Count of entity ids',
                                                          'Total number of entities for Charge Consolidation',
                                                          df_charge_pc1.shape[0]]
-entityDuplicatesDF.to_csv(OUTPUT_PATH + f"/EntityID_duplicates_{CURRENT_TIMESTAMP}.csv", index=False)
+entityDuplicatesDF.to_csv(OUTPUT_PATH + f"/EntityID_duplicates_{file_name_cleaned}_{CURRENT_TIMESTAMP}.csv",
+                          index=False)
 print("File has been processed. :)")
