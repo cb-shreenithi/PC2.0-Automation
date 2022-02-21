@@ -31,6 +31,9 @@ To parse the Excel file you need to follow the below steps exactly :
 
 **Step-1** : Run the shell script, from the terminal, to install dependencies.
 ```setup-environment 
+ chmod +x setup_env.sh
+ 
+ 
  ./setup_env.sh
 ```
 **NOTE :** After this step please verify if a folder has been created in your current 
