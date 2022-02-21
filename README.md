@@ -73,7 +73,7 @@ python3 Find_duplicates.py --filename "<Negative-flow-sheet>.xlsx"
 
 If this executes then you will see the following lines:
 
-> (pc2Automation) **** PC2.0-Automation % python3 Find_duplicates.py --filename <Negative-flow-sheet>.xlsx 
+> (pc2Automation) **** PC2.0-Automation % python3 Find_duplicates.py --filename "Negative-flow-sheet.xlsx" 
 > 
 > Processing file : <Negative-flow-sheet>.xlsx
 > 
