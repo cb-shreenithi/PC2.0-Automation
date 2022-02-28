@@ -7,7 +7,7 @@ import argparse
 
 BASE_DIR = os.getcwd()
 OUTPUT_PATH = BASE_DIR + '/Output'
-CURRENT_TIMESTAMP = str(datetime.now()).replace(".", "^").replace(" ", "_")
+CURRENT_TIMESTAMP = str(datetime.now()).replace(" ", "_")
 parser = argparse.ArgumentParser(description='Take Excel workbook name as input.')
 
 # Create folder if it does not exist
