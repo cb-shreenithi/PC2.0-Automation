@@ -24,7 +24,7 @@ parser.add_argument('--filename', type=str, required=True)
 args = parser.parse_args()
 file_name_cleaned = args.filename.replace(" ", "_")
 print("Processing file :", file_name_cleaned)
-excel_workbook_name = os.getcwd() + '/' + file_name_cleaned
+excel_workbook_name = os.getcwd() + '/' + args.filename
 excel_workbook = excel_workbook_name
 pd_excel_file = pd.ExcelFile(excel_workbook)
 excel_sheet_names = pd_excel_file.sheet_names
