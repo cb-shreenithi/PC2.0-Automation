@@ -92,3 +92,96 @@ PC2.0-Automation
 
 #### NOTE : `New PC2.0 - Negative flow sheet.xlsx` is an example input xlsx file. You can follow the format for the file headers. The `Output` folder contains sample outputs from that input file.
 
+
+## <ins>Associate_entity_id_with_frequency.py</ins>
+  
+Find the duplicates of the Item-IDs, Item-Names
+  and price-entity-ids in the Negative-Flow-sheet.xlsx. 
+  
+**IMPORTANT** :  In order to run the code you need the following files
+  in a directory :
+  > - Associate_entity_id_with_frequency.py
+  > - setup_env.sh
+
+Your folder structure should look like this :  
+```commandline
+PC2.0-Automation
+|
+├── Associate_entity_id_with_frequency.py
+├── <Template-plan-to-model-inputs>.xlsx
+└── setup_env.sh
+```
+
+**NOTE**: You need an Excel workbook (mentioned above as `<Template-plan-to-model-inputs>.xlsx`) as the input and the desired outputs will be available in the folder `Output`. 
+The filename `<Template-plan-to-model-inputs>.xlsx` means you need to put your Excel workbook here. 
+Please delete the folder `Output` after cloning as it only contains sample output files.
+
+
+### <ins>Install dependencies and run script</ins> :
+
+
+To parse the Excel file you need to follow the below steps exactly :
+
+**Step-1** : Run the shell script, from the terminal, to install dependencies.
+```setup-environment 
+ chmod +x setup_env.sh
+```
+`chmod +x` is necessary to change permissions.
+
+```commandline
+ ./setup_env.sh
+```
+
+**NOTE :** After this step please verify if a folder has been created in your current
+directory with the name `pc2Automation`. This is the virtual environment where all dependencies are 
+installed.
+
+After step 1 your folder structure should look like this :
+```commandline
+PC2.0-Automation
+|
+├── Associate_entity_id_with_frequency.py
+├── setup_env.sh
+├── <Template-plan-to-model-inputs>.xlsx
+└── pc2Automation
+```
+
+
+**Step-2** : Activate the Python virtual environment by executing the following
+command from your current directory 
+
+```activate-environment
+ source ./pc2Automation/bin/activate
+```
+You should now see the following in your terminal :
+
+> (pc2Automation) ***** PC2.0-Automation %
+
+
+**Step-3** : If your Step-2 is complete then all you have to do is run the following :
+```commandline
+python3 Associate_entity_id_with_frequency.py --instance_key "test_N2fux6f1PocdrrYkF8yxifk080jm7IHWQ" --instance_name "stampede-test" --filename "Copy of Stampede.ai PC 2.0 Template_ Plan to item model inputs .xlsx" 
+```
+**NOTE :** Please include your filename within double quotes.
+
+If this executes then you will see the following lines:
+
+> (pc2Automation) **** PC2.0-Automation % python3 Associate_entity_id_with_frequency.py --instance_key "test_N2fux6f1PocdrrYkF8yxifk080jm7IHWQ" --instance_name "stampede-test" --filename "Copy of Stampede.ai PC 2.0 Template_ Plan to item model inputs .xlsx" 
+> 
+> Processing file : <Template-plan-to-model-inputs>.xlsx
+> 
+> File has been processed. :)
+
+also, you will have a new folder in your current directory.
+```commandline
+PC2.0-Automation
+|
+├── Associate_entity_id_with_frequency.py
+├── setup_env.sh
+├── <Template-plan-to-model-inputs>.xlsx
+├── Output
+└── pc2Automation
+```
+
+#### NOTE : `Copy of Stampede.ai PC 2.0 Template_ Plan to item model inputs .xlsx` is an example input xlsx file. You can follow the format for the file headers. The `Output` folder contains sample outputs from that input file.
+

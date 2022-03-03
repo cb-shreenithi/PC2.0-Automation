@@ -7,7 +7,7 @@ import argparse
 
 BASE_DIR = os.getcwd()
 OUTPUT_PATH = BASE_DIR + '/Output'
-CURRENT_TIMESTAMP = str(datetime.now()).replace(" ", "_")
+CURRENT_TIMESTAMP = str(datetime.now()).replace(" ", "_").replace(".xlsx", "")
 parser = argparse.ArgumentParser(description='Take Excel workbook name as input.')
 
 # Create folder if it does not exist
@@ -176,4 +176,4 @@ entityDuplicatesDF.loc[len(entityDuplicatesDF.index)] = ['#', 'Count of entity i
                                                          df_charge_pc1.shape[0]]
 entityDuplicatesDF.to_csv(OUTPUT_PATH + f"/EntityID_duplicates_{file_name_cleaned}_{CURRENT_TIMESTAMP}.csv",
                           index=False)
-print("File has been processed. :)")
+print("Files have been processed. :)")

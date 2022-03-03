@@ -6,3 +6,4 @@ source ./pc2Automation/bin/activate
 ./pc2Automation/bin/pip3 install pandas
 ./pc2Automation/bin/pip3 install ib_insync
 ./pc2Automation/bin/pip3 install openpyxl
+./pc2Automation/bin/pip3 install chargebee
