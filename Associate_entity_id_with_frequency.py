@@ -128,7 +128,7 @@ Generate Addons DF from Excel sheet
 
 addons_excel_df = pd_excel_file.parse("Addon consolidation", header=[0, 1],
                                       skipinitialspace=True, tupleize_cols=True)
-addons_excel_cons_currency_freq = addons_excel_df[["Item price points ('Plan id's in catalog 1.0)"]].stack(). \
+addons_excel_cons_currency_freq = addons_excel_df[["Item price points ('Addon id's in catalog 1.0)"]].stack(). \
     reset_index()
 addons_excel_cons_currency_freq.columns = ['row_num_excel', 'currency_frequency_excel', 'price_entity_id_excel']
 addons_excel_cons_currency_freq['currency_frequency_excel'] = addons_excel_cons_currency_freq[
@@ -192,7 +192,7 @@ Generate Charges DF from Excel sheet
 charges_excel_df = pd_excel_file.parse("Charge consolidation", header=[0, 1],
                                        skipinitialspace=True, tupleize_cols=True)
 charges_excel_cons_currency_freq = plans_excel_df[
-    ["Item price points ('Plan id's in catalog 1.0)"]].stack().reset_index()
+    ["Item price points ('Charge id's in catalog 1.0)"]].stack().reset_index()
 charges_excel_cons_currency_freq.columns = ['row_num_excel', 'currency_frequency_excel', 'price_entity_id_excel']
 charges_excel_cons_currency_freq['currency_frequency_excel'] = charges_excel_cons_currency_freq[
     'currency_frequency_excel']. \
